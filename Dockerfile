@@ -12,8 +12,10 @@ MAINTAINER XiangJL xjl-tommy@qq.com
 
 RUN pip install -I flexget transmissionrpc
 
-RUN mkdir -p /flexget
+RUN mkdir -p /flexget /docker
+
+COPY ./startup.sh /docker/	
 
 VOLUME ["/flexget"]
 
-ENTRYPOINT ["/usr/local/bin/flexget", "-c", "/flexget/config.yml", "--loglevel", "info", "daemon", "start"]
+ENTRYPOINT ["/docker/startup.sh"]
