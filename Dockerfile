@@ -13,8 +13,7 @@ ENV LC_ALL en_US.UTF-8
 RUN yum makecache && \
      yum install -y epel-release && \
      yum install -y python python-pip && \
-
-RUN pip install -I flexget transmissionrpc
+     pip install -I flexget transmissionrpc
 
 RUN mkdir -p /flexget /docker
 
