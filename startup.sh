@@ -6,4 +6,4 @@
 
 rm -f /flexget/.config-lock
 
-/usr/bin/flexget -c /flexget/config.yml --loglevel verbose daemon start
+exec /usr/bin/flexget -c /flexget/config.yml --loglevel verbose daemon start
