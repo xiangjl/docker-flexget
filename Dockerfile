@@ -2,7 +2,7 @@
 # build docker image to run the flexget
 #
 
-FROM centos:latest
+FROM centos:7
 MAINTAINER XiangJL xjl-tommy@qq.com
 
 # Set the locale RUN locale-gen en_US.UTF-8  
